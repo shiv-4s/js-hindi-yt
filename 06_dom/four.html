@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | CHai aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    /* function addLanguage(langName) {
+        const litem =  document.createElement('li')
+        litem.innerHTML = `${langName}`
+        const pclass = document.querySelector('.language')
+        pclass.appendChild(litem)
+    }
+
+    addLanguage("python")
+    addLanguage("typescript") */
+
+    function addLanguage(langName) {
+        const litem =  document.createElement('li')
+        litem.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(litem)
+    }
+    addLanguage("golang")
+
+    //EDIT
+
+ /*    const secondlang = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement("li")
+    newli.textContent = "mojo"
+    secondlang.replaceWith(newli) */
+/* 
+    const firstlang = document.querySelector("li:nth-child(1)")
+    const newli = document.createElement("li")
+    newli.textContent = "java"
+    firstlang.replaceWith(newli) */
+
+    //REMOVE
+    const lastlang =  document.querySelector('li:last-child')
+    lastlang.remove()
+
+</script>
+</html>
