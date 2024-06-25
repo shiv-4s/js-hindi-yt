@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>Chai aur Javscript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+    let intervalId;
+    const startButton = function(){
+        function startValue(){
+            console.log('Barya Shivam', Date.now())
+        }
+        intervalId = setInterval(startValue, 2000);
+    }
+    const stopButton = function(){
+        clearInterval(intervalId)
+        console.log('STOPPED!!!!!!!!!!1')
+        intervalId = null
+    }
+    document.querySelector('#start').addEventListener('click', startButton);
+    document.querySelector('#stop').addEventListener('click', stopButton);
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>Chai aur Code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const shiv = () => {
+        console.log("Barya Shivam")
+    }
+
+    const changeTest = function(){
+        document.querySelector('h1').innerHTML = "best JS Series"
+    }
+    setTimeout(shiv, 2000);
+    const stop = setTimeout(changeTest, 2000);
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(stop);
+        console.log('Stopped!!!!!!!!!')
+    })
+</script>
+</html>
